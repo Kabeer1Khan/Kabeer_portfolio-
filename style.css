@@ -946,7 +946,7 @@ body {
 .about_picture {
   width: clamp(170px, 17vw, 245px);
   aspect-ratio: 1 / 1;
-  background-image: url("assests/kabeer/kabeerFull.jpeg");
+  background-image: url("assests/kabeer/about_img.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

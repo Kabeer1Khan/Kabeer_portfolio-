@@ -128,20 +128,41 @@ if (contactForm) {
     const btnIcon = btn.querySelector("i");
     const originalText = btnText.textContent;
 
-    btnText.textContent = "MESSAGE SENT";
-    btnIcon.classList.remove("fa-arrow-right");
-    btnIcon.classList.add("fa-check");
-    btn.classList.add("sent");
+    const selectedOption = subjectSelect.options[subjectSelect.selectedIndex];
 
-    setTimeout(() => {
-      contactForm.reset();
-      btnText.textContent = originalText;
-      btnIcon.classList.remove("fa-check");
-      btnIcon.classList.add("fa-arrow-right");
-      btn.classList.remove("sent");
-    }, 2500);
+    const templateParams = {
+      name: contactForm.user_name.value,
+      email: contactForm.user_email.value,
+      title: selectedOption ? selectedOption.text : "",
+      message: contactForm.message.value,
+      time: new Date().toLocaleString(),
+    };
 
-    // 👉 yahan apna real backend (EmailJS / Formspree / apni API) call karna
+    btnText.textContent = "SENDING...";
+
+    emailjs
+      .send("service_gcwescv", "template_pdxq2rh", templateParams)
+      .then(() => {
+        btnText.textContent = "MESSAGE SENT";
+        btnIcon.classList.remove("fa-arrow-right");
+        btnIcon.classList.add("fa-check");
+        btn.classList.add("sent");
+
+        setTimeout(() => {
+          contactForm.reset();
+          btnText.textContent = originalText;
+          btnIcon.classList.remove("fa-check");
+          btnIcon.classList.add("fa-arrow-right");
+          btn.classList.remove("sent");
+        }, 2500);
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        btnText.textContent = "FAILED, TRY AGAIN";
+        setTimeout(() => {
+          btnText.textContent = originalText;
+        }, 2500);
+      });
   });
 }
 
