@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kabeer Khan — Web Designer &amp; Digital Creative</title>
+    <meta
+      name="description"
+      content="Portfolio of Kabeer Khan — web designer and digital creative building clean, modern, user-focused websites."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Arizonia&family=Martel+Sans:wght@400;600;700;800&family=Newsreader:opsz,wght@6..72,200..500&family=Noto+Serif+JP:wght@300;400;500;600&family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <meta charset="UTF-8" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
   </head>
   <body>
-    <section class="hero_section">
+    <section class="hero_section" id="home">
       <nav class="nav_bar">
         <div class="pession">
           <div class="pession_icon">
@@ -30,11 +35,11 @@
         </div>
         <div class="navigation_links">
           <ul class="navigation_links_ul">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#project_sec">Projects</a></li>
             <li><a href="#skills_section">Skills</a></li>
             <li><a href="#about_sec">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
@@ -46,7 +51,7 @@
           </div>
 
           <div class="arrowToContact">
-            <a href="#contact"
+            <a href="#contact" aria-label="Go to contact section"
               ><i
                 class="fa-solid fa-arrow-right"
                 style="color: rgb(253, 81, 18)"
@@ -71,18 +76,17 @@
         <h3 class="heading_1">HELLO, I'M</h3>
         <h2 class="heading_2">
           <div class="animation_box">
-            <h2 class="heading_3">KABEER</h2>
+            <span class="heading_3">KABEER</span>
           </div>
           <div class="animation_box">
-            <h2 class="heading_3">KHAN</h2>
+            <span class="heading_3">KHAN</span>
           </div>
         </h2>
-        <h4 class="heading_4">WEB DESIGNER & DIGITAL CREATIVE</h4>
+        <h4 class="heading_4">WEB DESIGNER &amp; DIGITAL CREATIVE</h4>
 
         <p class="intro_pera">
-          I craft clean, modern, and user-focused <br />
-          websites that help brands stand out and <br />
-          connect with the right audience.
+          I craft clean, modern, and user-focused websites that help brands
+          stand out and connect with the right audience.
         </p>
 
         <p class="sign">Kabeer Khan</p>
@@ -90,12 +94,12 @@
 
       <div class="display_img">
         <span class="img_bakcground"></span>
-        <div class="kabeer_img"></div>
+        <div class="kabeer_img" role="img" aria-label="Portrait of Kabeer Khan"></div>
       </div>
 
       <div class="circular-badge">
         <!-- Curved Text along the border -->
-        <svg class="badge-svg" viewBox="0 0 300 300">
+        <svg class="badge-svg" viewBox="0 0 300 300" aria-hidden="true">
           <defs>
             <path
               id="circlePath"
@@ -126,7 +130,7 @@
         <span class="vertical-text2">DIGITAL EXPERIENCES</span>
       </div>
 
-      <button class="let-build-btn">LET'S BUILD</button>
+      <button class="let-build-btn" type="button">LET'S BUILD</button>
     </section>
 
     <span class="saperate_line1"></span>
@@ -140,8 +144,7 @@
 
         <div class="header_text">
           <p class="text_h">
-            A curated selection of recent work <br />
-            showcasing design , development, <br />
+            A curated selection of recent work showcasing design, development,
             and problem-solving.
           </p>
         </div>
@@ -157,7 +160,7 @@
               <p class="project_title">Architecture Studio</p>
             </div>
             <div class="arrow_viewProject">
-              <a href="#" class="arrow-circle" aria-label="View project">
+              <a href="#" class="arrow-circle" aria-label="View Studio Form project">
                 <i class="fa-solid fa-arrow-right icon-1"></i>
                 <i class="fa-solid fa-arrow-right icon-2"></i>
               </a>
@@ -170,11 +173,11 @@
           <div class="project_content">
             <h2 class="project_counting">02</h2>
             <div class="project_details">
-              <p class="project_name">Avenue & Co.</p>
+              <p class="project_name">Avenue &amp; Co.</p>
               <p class="project_title">Luxury Fashion Brand</p>
             </div>
             <div class="arrow_viewProject">
-              <a href="#" class="arrow-circle" aria-label="View project">
+              <a href="#" class="arrow-circle" aria-label="View Avenue &amp; Co. project">
                 <i class="fa-solid fa-arrow-right icon-1"></i>
                 <i class="fa-solid fa-arrow-right icon-2"></i>
               </a>
@@ -187,11 +190,11 @@
           <div class="project_content">
             <h2 class="project_counting">03</h2>
             <div class="project_details">
-              <p class="project_name">The Jounral</p>
+              <p class="project_name">The Journal</p>
               <p class="project_title">Editorial Platform</p>
             </div>
             <div class="arrow_viewProject">
-              <a href="#" class="arrow-circle" aria-label="View project">
+              <a href="#" class="arrow-circle" aria-label="View The Journal project">
                 <i class="fa-solid fa-arrow-right icon-1"></i>
                 <i class="fa-solid fa-arrow-right icon-2"></i>
               </a>
@@ -206,7 +209,7 @@
     <section class="skills_section" id="skills_section">
       <div class="represent_skillsB1">
         <div class="skills_h">
-          <div class="s_h1">SKILLS &</div>
+          <div class="s_h1">SKILLS &amp;</div>
           <div class="s_h2">EXPERTISE</div>
         </div>
 
@@ -247,11 +250,8 @@
         <div class="img_coma"></div>
         <div class="about_pera">
           <p class="pera">
-            I design and build digital <br />
-            experience that are not <br />
-            only beautiful but also <br />
-            functional, intuitive, and <br />
-            impactful.
+            I design and build digital experiences that are not only beautiful
+            but also functional, intuitive, and impactful.
           </p>
         </div>
       </div>
@@ -264,8 +264,7 @@
           <div class="privent_content">
             <div class="subHeading_cont">USER-CENTERED DESIGN</div>
             <div class="detaile_cont">
-              Focus on creating seamless and <br />
-              meaningful user experiences.
+              Focus on creating seamless and meaningful user experiences.
             </div>
           </div>
         </div>
@@ -273,10 +272,9 @@
         <div class="privent">
           <div class="icon"><i class="fa-solid fa-code"></i></div>
           <div class="privent_content">
-            <div class="subHeading_cont">CLEAN & MODERN CODE</div>
+            <div class="subHeading_cont">CLEAN &amp; MODERN CODE</div>
             <div class="detaile_cont">
-              High-quality, scalable, and <br />
-              performant development.
+              High-quality, scalable, and performant development.
             </div>
           </div>
         </div>
@@ -286,8 +284,7 @@
           <div class="privent_content">
             <div class="subHeading_cont">FULLY RESPONSIVE</div>
             <div class="detaile_cont">
-              Website that look and work <br />
-              perfactly on any device.
+              Websites that look and work perfectly on any device.
             </div>
           </div>
         </div>
@@ -297,8 +294,7 @@
           <div class="privent_content">
             <div class="subHeading_cont">PERFORMANCE DRIVEN</div>
             <div class="detaile_cont">
-              Speed, SEO, and best practices <br />
-              built into every project.
+              Speed, SEO, and best practices built into every project.
             </div>
           </div>
         </div>
@@ -312,15 +308,14 @@
         <h2 class="heading1">ABOUT</h2>
         <h2 class="heading2">ME</h2>
       </div>
-      <div class="about_picture"></div>
+      <div class="about_picture" role="img" aria-label="Kabeer Khan"></div>
       <div class="about_container">
         <div class="sub_heading">LET'S BUILD SOMETHING TOGETHER</div>
         <div class="my_name">I'M KABEER KHAN</div>
         <div class="my_detail">
-          I'm a pessionate web designer and digital creative <br />
-          with a love for clean design, modern technology <br />
-          and meaningful digital experiences. I help businesses <br />
-          and individuals turn their ideas into real, impactful <br />
+          I'm a passionate web designer and digital creative with a love for
+          clean design, modern technology and meaningful digital experiences. I
+          help businesses and individuals turn their ideas into real, impactful
           solutions through design and development.
         </div>
       </div>
@@ -347,16 +342,15 @@
 
     <span class="saperate_line4"></span>
 
-    <section class="contact_section">
+    <section class="contact_section" id="contact">
       <div class="contact_content">
         <div class="skills_h">
           <div class="c_h1">GET IN TOUCH</div>
           <div class="c_h2">CONTACT</div>
         </div>
         <div class="contact_title">
-          Have a project in mind? let's talk! <br />
-          I'd love to hear from you and discuss <br />
-          how we can bring your ideas to life.
+          Have a project in mind? Let's talk. I'd love to hear from you and
+          discuss how we can bring your ideas to life.
         </div>
       </div>
 
@@ -424,7 +418,7 @@
             <div class="e_icon"><i class="fa-solid fa-phone"></i></div>
             <div class="email_content">
               <div class="email_heading">Phone</div>
-              <div class="numbers">+92 335 3977433</div>
+              <div class="numbers">+92 335 3977433</div>
             </div>
           </div>
 
@@ -444,11 +438,17 @@
               <a
                 href="https://www.instagram.com/itx_kabeer_kk/#"
                 target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
             </div>
             <div class="instagram_link">
-              <a href="https://www.facebook.com/me/" target="_blank"
+              <a
+                href="https://www.facebook.com/me/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
             </div>
@@ -466,11 +466,11 @@
 
         <nav class="footer_nav">
           <ul class="footer_nav_ul">
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#project_sec">Projects</a></li>
             <li><a href="#skills_section">Skills</a></li>
             <li><a href="#about_sec">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
