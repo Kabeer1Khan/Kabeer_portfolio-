@@ -2063,11 +2063,14 @@ body {
 }
 
 /* ---------- Mobile (767px aur neeche) ---------- */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   :root {
     --section-gap: clamp(55px, 12vw, 90px);
   }
 
+  .intro_div{
+    margin-right: 20%;
+  }
   .nav_bar {
     top: 12px;
     padding: 6px 12px;
@@ -2089,11 +2092,18 @@ body {
   }
 
   .display_img {
+    margin-bottom: 10%;
+    margin-left: 13%;
     max-width: 300px;
+  }
+
+  .let-build-btn{
+    right: 40%;
+    bottom: 3%;
   }
   .circular-badge {
     width: 115px;
-    margin-right: 0;
+    margin-right: 20%;
   }
   .badge-svg text {
     font-size: 12px;
@@ -2168,6 +2178,9 @@ body {
 
 /* ---------- Small mobile (480px aur neeche) ---------- */
 @media (max-width: 480px) {
+  .intro_div{
+    margin-right: 20%;
+  }
   .heading {
     font-size: 19vw;
   }
@@ -2181,6 +2194,7 @@ body {
     font-size: 0.66em;
     padding: 4px 6px;
   }
+  
   .about_picture {
     width: 165px;
   }
@@ -2195,6 +2209,9 @@ body {
 
 /* ---------- Very small (375px aur neeche) ---------- */
 @media (max-width: 375px) {
+  .intro_div{
+    margin-right: 20%;
+  }
   .navigation_links_ul li a {
     font-size: 0.6em;
     padding: 3px 5px;
