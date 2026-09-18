@@ -2098,9 +2098,9 @@ body {
   }
 
   .let-build-btn{
-    right: 40%;
     bottom: 3%;
-  }
+    transform: translateX(-50%);
+}
   .circular-badge {
     width: 115px;
     margin-right: 20%;
@@ -2186,13 +2186,21 @@ body {
   }
   .display_img {
     max-width: 250px;
+    margin-right: 43%;
   }
   .circular-badge {
+    transform: translateX(65%) translateY(-25px);
     width: 105px;
   }
   .navigation_links_ul li a {
     font-size: 0.66em;
     padding: 4px 6px;
+  }
+
+  .let-build-btn{
+    width: 50%;
+    font-size: 0.9em;
+    transform: translateX(-26%) translateY(15px);
   }
   
   .about_picture {
@@ -2218,9 +2226,17 @@ body {
   }
   .display_img {
     max-width: 215px;
+    margin-right: 45%;
   }
   .circular-badge {
     width: 95px;
+    transform: translateX(65%);
+  }
+
+  .let-build-btn{
+    width: 60%;
+    font-size: 0.9em;
+    transform: translateX(-20%) translateY(15px);
   }
   .badge-center-text {
     font-size: 10px;
