@@ -177,3 +177,45 @@ if (buildBtn && contactSection) {
     contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
+
+/* =========================================================
+   LIGHT / DARK THEME TOGGLE
+   ========================================================= */
+(function () {
+  const DEFAULT_THEME = "dark"; // "dark" or "light" (used when nothing is saved)
+  const rootEl = document.documentElement;
+  const themeToggleBtn = document.getElementById("themeToggle");
+
+  function setTheme(theme, save) {
+    rootEl.setAttribute("data-theme", theme);
+
+    if (themeToggleBtn) {
+      const isDark = theme === "dark";
+      themeToggleBtn.setAttribute("aria-pressed", String(isDark));
+      themeToggleBtn.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
+    }
+
+    if (save) {
+      try {
+        localStorage.setItem("theme", theme);
+      } catch (e) {}
+    }
+  }
+
+  let saved = null;
+  try {
+    saved = localStorage.getItem("theme");
+  } catch (e) {}
+
+  setTheme(saved === "light" || saved === "dark" ? saved : DEFAULT_THEME, false);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const next = rootEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(next, true);
+    });
+  }
+})();

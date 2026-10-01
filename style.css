@@ -2242,3 +2242,288 @@ body {
     font-size: 10px;
   }
 }
+
+/* ============================================================
+   THEME TOGGLE + DARK MODE
+   ============================================================ */
+:root {
+  color-scheme: light;
+}
+
+body {
+  transition: background-color 0.35s ease;
+}
+
+/* ---------- toggle button ---------- */
+.theme_toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(26, 26, 26, 0.18);
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.theme_toggle i {
+  position: absolute;
+  font-size: 15px;
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.35s ease;
+}
+
+.theme_toggle .icon_moon {
+  color: #242221;
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme_toggle .icon_sun {
+  color: var(--accent-2);
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+.theme_toggle:hover {
+  border-color: var(--accent);
+  transform: scale(1.08);
+}
+
+.theme_toggle:active {
+  transform: scale(0.94);
+}
+
+/* ---------- toggle visible on tablet + mobile ---------- */
+@media (max-width: 991px) {
+  .nav_bar {
+    gap: 8px;
+  }
+  .current_situation {
+    display: flex !important;
+    gap: 0;
+  }
+  .situa,
+  .arrowToContact {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav_bar,
+  .nav_bar.scrolled {
+    gap: 4px;
+    padding: 6px 8px;
+  }
+  .theme_toggle {
+    width: 30px;
+    height: 30px;
+  }
+  .theme_toggle i {
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
+   DARK PALETTE
+   ============================================================ */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121110;
+  --ink: #e9e5de;
+  --muted: #8f8a83;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #c9583a;
+  --accent-2: #d95f38;
+  --accent-3: #d95f38;
+}
+
+/* toggle in dark mode: show the sun */
+html[data-theme="dark"] .theme_toggle {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+html[data-theme="dark"] .theme_toggle .icon_moon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+html[data-theme="dark"] .theme_toggle .icon_sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* ---------- navbar ---------- */
+html[data-theme="dark"] .nav_bar {
+  background: rgba(18, 17, 16, 0.72);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+html[data-theme="dark"] .nav_bar.scrolled {
+  background: rgba(24, 22, 20, 0.85);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+}
+html[data-theme="dark"] .navigation_links_ul li a {
+  color: #d9d5ce;
+}
+html[data-theme="dark"] .navigation_links_ul li a:hover {
+  color: #fa490e;
+}
+html[data-theme="dark"] .situa_p a:hover {
+  color: var(--accent);
+}
+
+/* ---------- primary text (headings, labels) ---------- */
+html[data-theme="dark"]
+  :is(
+    .pession_text,
+    .situa_p a,
+    .heading_1,
+    .heading_2,
+    .sign,
+    .heading1,
+    .s_h1,
+    .pera,
+    .subHeading_cont,
+    .my_name,
+    .c_h1,
+    .email_heading,
+    .follow_me,
+    .skill,
+    .skill2
+  ) {
+  color: #ece8e1;
+}
+
+/* big PORTFOLIO title */
+html[data-theme="dark"] .heading {
+  color: #d9d5ce;
+}
+
+/* ---------- secondary text (paragraphs, captions) ---------- */
+html[data-theme="dark"]
+  :is(
+    .intro_pera,
+    .text_h,
+    .detaile_cont,
+    .sub_heading,
+    .my_detail,
+    .years,
+    .contact_title,
+    .gmail,
+    .numbers,
+    .project_title,
+    [class*="skill_percent"]
+  ) {
+  color: #a9a49c;
+}
+
+/* ---------- accent text ---------- */
+html[data-theme="dark"] :is(.years_num, .e_icon, .c_h2) {
+  color: var(--accent-2);
+}
+
+/* ---------- hero badge + button ---------- */
+html[data-theme="dark"] .circular-badge {
+  background: rgba(18, 17, 16, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+html[data-theme="dark"] .badge-svg text {
+  fill: #e9e5de;
+}
+html[data-theme="dark"] .let-build-btn:hover {
+  background-color: #121110;
+  color: var(--accent);
+  box-shadow: 0 6px 20px rgba(201, 88, 58, 0.35);
+}
+
+/* ---------- projects ---------- */
+html[data-theme="dark"] :is(.project_img, .project_img2, .project_img3) {
+  background-color: #1a1816;
+  border: 1px solid #2b2825;
+}
+html[data-theme="dark"] .arrow-circle .icon-2 {
+  color: #ffffff;
+}
+
+/* ---------- skills ---------- */
+html[data-theme="dark"]
+  :is(.score_line1, .score_line2, .score_line3, .score_line4) {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- about ---------- */
+html[data-theme="dark"] .about_picture {
+  border: 1px solid #2b2825;
+}
+
+/* ---------- contact form ---------- */
+html[data-theme="dark"] .contact_form {
+  background-color: #181614;
+  border-color: #2e2a27;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+html[data-theme="dark"] .form_row {
+  border-bottom-color: #2e2a27;
+}
+html[data-theme="dark"] :is(.form_input, .form_select, .form_textarea) {
+  color: #ece8e1;
+}
+html[data-theme="dark"] :is(.form_input, .form_select, .form_textarea):focus {
+  background-color: rgba(201, 88, 58, 0.08);
+}
+html[data-theme="dark"] :is(.form_input, .form_textarea)::placeholder {
+  color: #8f8a83;
+}
+html[data-theme="dark"] .form_select {
+  color: #8f8a83;
+}
+html[data-theme="dark"] .form_select:valid {
+  color: #ece8e1;
+}
+html[data-theme="dark"] .form_select option {
+  background-color: #181614;
+  color: #ece8e1;
+}
+html[data-theme="dark"] .select_arrow {
+  color: #8f8a83;
+}
+html[data-theme="dark"] .form_input:-webkit-autofill,
+html[data-theme="dark"] .form_textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px #181614 inset;
+  -webkit-text-fill-color: #ece8e1;
+  caret-color: #ece8e1;
+}
+
+/* ---------- social icons ---------- */
+html[data-theme="dark"] .instagram_link {
+  border-color: #3a3631;
+}
+html[data-theme="dark"] .instagram_link a {
+  color: #cfcac2;
+}
+html[data-theme="dark"] .instagram_link:hover {
+  border-color: var(--accent-2);
+}
+html[data-theme="dark"] .instagram_link:hover a {
+  color: var(--accent-2);
+}
+
+/* ---------- footer ---------- */
+html[data-theme="dark"] .footer_section {
+  background-color: var(--bg);
+  border-top: 1px solid var(--line);
+}

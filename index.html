@@ -24,6 +24,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <script>
+      (function () {
+        var theme = "dark"; // default theme: change to "light" if you prefer
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") theme = saved;
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -63,6 +73,17 @@
               ></i
             ></a>
           </div>
+
+          <button
+            class="theme_toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Switch to light mode"
+            aria-pressed="true"
+          >
+            <i class="fa-solid fa-sun icon_sun"></i>
+            <i class="fa-solid fa-moon icon_moon"></i>
+          </button>
         </div>
       </nav>
 
@@ -170,7 +191,8 @@
             </div>
             <div class="arrow_viewProject">
               <a
-                href="https://fusion-furniture-web-project.vercel.app/" target="_blank"
+                href="https://fusion-furniture-web-project.vercel.app/"
+                target="_blank"
                 class="arrow-circle"
                 aria-label="View Studio Form project"
               >
